@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DynaMEP</name>
+    </assembly>
+    <members>
+        <member name="T:DynaMEP.About.Information">
+            <summary>
+                Information All Package
+            </summary>
+        </member>
+        <member name="M:DynaMEP.About.Information.Author">
+            <summary>
+                Contact with Author
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DynaMEP.DynaMEPimages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DynaMEP.DynaMEPimages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DynaMEP.DynaMEPimages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DynaMEP.DynaMEPimages.DynaMEP_About_Information_Author_Large">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DynaMEP.DynaMEPimages.DynaMEP_About_Information_Author_Small">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

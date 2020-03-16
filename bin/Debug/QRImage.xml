@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QRImage</name>
+    </assembly>
+    <members>
+        <member name="T:QRImage.About.Information">
+            <summary>
+                Information All Package
+            </summary>
+        </member>
+        <member name="M:QRImage.About.Information.Author">
+            <summary>
+                Contact with Author
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QRImage.Color.Colors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:QRImage.Color.Colors.SelectColorByName(System.String)">
+            <summary>
+            Select Color ByName Input String Color
+            </summary>
+            <param name="NameColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRImage.Color.Colors.GetAllColors">
+            <summary>
+            Return All Color
+            </summary>
+            <returns name = "ListColor"></returns>
+        </member>
+        <member name="T:QRImage.Image.Image">
+            <summary>
+            Image
+            </summary>
+        </member>
+        <member name="M:QRImage.Image.Image.ResizeImage(System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Resize Image Width and Heigh
+            </summary>
+            <param name="image"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns name = "BitMapImage"></returns>
+        </member>
+        <member name="M:QRImage.Image.Image.SaveAsImage(System.String,System.Drawing.Bitmap)">
+            <summary>
+            Save Image as New Name
+            </summary>
+            <param name="path">Path have Character (\) Finnish</param>
+            <param name="image">Image Resized Size</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:QRImage.Image.Image.Exportmethod(System.String)">
+            <summary>
+            Input File Dll To Read All Path Method
+            </summary>
+            <param name="dll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRImage.Image.Image.GetFileFolder(System.String)">
+            <summary>
+            Get All File Have In Folder
+            </summary>
+            <param name="folderName"></param>
+            <returns name= "ImageList"></returns>
+        </member>
+        <member name="M:QRImage.Image.Image.GetImagesPath(System.String)">
+            <summary>
+            Return all Image format "jpg", "jpeg", "png", "gif", "tiff", "bmp", "svg" in folder
+            </summary>
+            <param name="folderName"></param>
+            <returns name ="files"></returns>
+        </member>
+        <member name="M:QRImage.Image.Image.GetFilesFrom(System.String,System.String[],System.Boolean)">
+            <summary>
+            Get File From folder with filter
+            </summary>
+            <param name="searchFolder"></param>
+            <param name="filters"></param>
+            <param name="isRecursive"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QRImage.QrCode.QrCode">
+            <summary>
+            QrCode
+            </summary>
+        </member>
+        <member name="M:QRImage.QrCode.QrCode.CreateQRCodeString(System.String,System.Int32)">
+            <summary>
+            Create QRCode String Sample
+            </summary>
+            <param name="str"></param>
+            <param name="Pixel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRImage.QrCode.QrCode.CreateQRCodeColor(System.String,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Create QRCode Color Option Extend
+            </summary>
+            <param name="str">String Gen QR</param>
+            <param name="Pixel">Pixel input a Int</param>
+            <param name="ColorQR">Color in QR</param>
+            <param name="ColorBG">Color BackGround</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

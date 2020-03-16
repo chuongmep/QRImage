@@ -1,0 +1,12 @@
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRCoder.dll
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRCoder.pdb
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\ZeroTemplate.csproj.GenerateResource.cache
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\ZeroTemplate.csproj.CoreCompileInputs.cache
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\ZeroTemplate.csproj.CopyComplete
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRImage.dll.config
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRImage.xml
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRImage.dll
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\bin\Debug\QRImage.pdb
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\QRImage.Resources.QRImage.resources
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\QRImage.dll
+H:\revit\Dynamo\API\ZeroTouchNodeTemplate\obj\Debug\QRImage.pdb

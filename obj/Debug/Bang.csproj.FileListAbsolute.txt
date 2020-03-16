@@ -1,0 +1,11 @@
+D:\API\BangForDynamo\src\Bang\bin\Debug\Bang.dll.config
+D:\API\BangForDynamo\src\Bang\bin\Debug\Bang.xml
+D:\API\BangForDynamo\src\Bang\bin\Debug\Bang.dll
+D:\API\BangForDynamo\src\Bang\bin\Debug\Bang.pdb
+D:\API\BangForDynamo\src\Bang\bin\Debug\Newtonsoft.Json.dll
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.Resources.BangImages.resources
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.csproj.GenerateResource.cache
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.csproj.CoreCompileInputs.cache
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.csproj.CopyComplete
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.dll
+D:\API\BangForDynamo\src\Bang\obj\Debug\Bang.pdb

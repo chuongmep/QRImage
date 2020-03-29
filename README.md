@@ -1,5 +1,5 @@
 # QRImage
-
+![](https://chuongmep.com/static/QrImage001-9f76bbb927b024976bbde7beea943055-e8874.png)
  QRImage for Create QRCode And Zerotouch Image
 
 In this article we describe how to automatically register batch icons for Zero Touch . This is a follow-up article Add Icons for a Zero Touch Assembly or NodeModel assembly.You can find it <a href="https://github.com/DynamoDS/Dynamo/wiki/Add-Icons-for-a-Zero-Touch-Assembly-or-NodeModel-assembly" target="_blank">here</a>.

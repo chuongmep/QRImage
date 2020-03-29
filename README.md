@@ -1,5 +1,5 @@
 # QRImage
-![](https://chuongmep.com/static/QrImage001-9f76bbb927b024976bbde7beea943055-e8874.png)
+
 
  QRImage for Create QRCode And Zerotouch Image
 
@@ -7,6 +7,9 @@ In this article we describe how to automatically register batch icons for Zero T
 
 This problem occurs when we start adding more images to the widget and so much that we have to do it again so much time.I asked myself the question on the forum and solved it.To automate this work I will demonstrate how to solve the problem quickly as below : 
 1. Search and download packages with the name QRImage on Dynamo.
+
+![](https://chuongmep.com/static/QrImage001-9f76bbb927b024976bbde7beea943055-e8874.png)
+
 2. Open the Sample.dyn file in the extra directory path.You can also download that file <a href="https://www.mediafire.com/file/ha1m0uq65usgmzz/Sample.dyn/file" target="_blank">here</a> 
 3. All you need to do is modify the dll path and image creation path, with just a click of a button you can create a whole series of images with the required size in accordance with the name that the Zerotouch describes.
 4. Add your image files to the project and package the product

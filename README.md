@@ -18,3 +18,5 @@ This problem occurs when we start adding more images to the widget and so much t
 
 This article is brief because my English is not really good, I hope to reduce the time for programmers to focus on coding. I have made a video describing the process <a href="https://www.youtube.com/watch?v=WWhFBe1GNhA" target="_blank">here</a>   if you still not done yet.
 The whole source code I have packaged is very simple so that I do not depend too much on the system, if you have contributions or editing suggestions, I can continue to improve this product.Here is my <a href="https://github.com/chuong9x/QRImage" target="_blank">QRImage Repo</a>  
+
+<script src="https://gist.github.com/chuong9x/79492f25b966f2ccc50729290805381b.js"></script>

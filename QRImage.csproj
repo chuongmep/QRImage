@@ -74,17 +74,25 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="About\About.cs" />
-    <Compile Include="Color\Colors.cs" />
-    <Compile Include="Image\Image.cs" />
+    <Compile Include="About.cs" />
+    <Compile Include="Colors.cs" />
+    <Compile Include="Assemblys.cs" />
+    <Compile Include="Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QrCode\QrCode.cs" />
+    <Compile Include="QrCode.cs" />
+    <Compile Include="Resources\QRImageIcon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QRImageIcon.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Pack\extra\Sample.dyn" />
+    <None Include="Pack\pkg.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -99,78 +107,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\QRImage.resx" />
+    <Folder Include="Pack\dyf\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\QRImage.Colors.GetAllColors.Large.png" />
+    <Content Include="Pack\bin\QRCoder.dll" />
+    <Content Include="Pack\bin\QRCoder.pdb" />
+    <Content Include="Pack\bin\QRImage.dll" />
+    <Content Include="Pack\bin\QRImage.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\QRImage.Colors.GetAllColors.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Colors.SelectColorByName.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Colors.SelectColorByName.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.Exportmethod.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.Exportmethod.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetFileFolder.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetFileFolder.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetFilesFrom.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetFilesFrom.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetImagesPath.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.GetImagesPath.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.ResizeImage.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.ResizeImage.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.SaveAsImage.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Image.SaveAsImage.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Information.Author.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.Information.Author.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.QrCode.CreateQRCodeColor.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.QrCode.CreateQRCodeColor.Small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.QrCode.CreateQRCodeString.Large.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QRImage.QrCode.CreateQRCodeString.Small.png" />
+    <EmbeddedResource Include="Resources\QRImageIcon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QRImageIcon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy /Y  "$(TargetDir)QRImage.dll" "$(AppData)\Dynamo\Dynamo Core\2.6\packages\QRImage\bin\"</PostBuildEvent>
   </PropertyGroup>
   <Target Name="BeforeBuild">
   </Target>
@@ -184,7 +137,7 @@
       <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
     </GetAssemblyIdentity>
     <!-- Generate customization dll -->
-    <GenerateResource SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" UseSourcePath="true" Sources="$(ProjectDir)\Resources\QRImage.resx" OutputResources="$(ProjectDir)\Resources\QRImage.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
-    <AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)\Resources\QRImage.resources" OutputAssembly="$(OutDir)QRImage.customization.dll" Version="%(AssemblyInfo.Version)" />
+    <GenerateResource SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" UseSourcePath="true" Sources="$(ProjectDir)\Resources\QRImageIcon.resx" OutputResources="$(ProjectDir)\Resources\QRImageIcon.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
+    <AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)\Resources\QRImageIcon.resources" OutputAssembly="$(OutDir)QRImage.customization.dll" Version="%(AssemblyInfo.Version)" />
   </Target>
 </Project>

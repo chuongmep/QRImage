@@ -1,0 +1,1506 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Sample",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "d26ed0d4fe494d4d925e6a6a6ba71577",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "..\\image\\QImage.About.Information.Author.Large.png",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "Id": "eb37a414b35d4579b6ff17b495454776",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "H:\\revit\\Dynamo\\API\\ZeroTouchNodeTemplate\\bin\\Debug\\QImage.dll",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "Id": "f452b148e19c46508b37a9caaef7fc5f",
+      "Name": "String",
+      "Type": "string",
+      "Value": "C:\\Users\\HO VAN CHUONG\\Downloads\\image\\",
+      "Description": "Creates a string."
+    },
+    {
+      "Id": "86401c104b0b454fb059c2f973e858ee",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Users\\Public\\OneDrive - IZI Cloud\\Ảnh\\PythonAPI",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "Id": "7be5ac89e07241ff85b37e31ac6a91a2",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "150;",
+      "Id": "ee1b6bee2b2c4278857d6dcb2c704e5d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cfbba0cf70a44f3dbeb1c307c5ac4fc9",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.ReadFromFile@var",
+      "Id": "1960bacbe7bf4568a988ece890927e13",
+      "Inputs": [
+        {
+          "Id": "ba5cdc01e535478eaa211c3b70e411b9",
+          "Name": "file",
+          "Description": "File object to load image from.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eea0685a653e4000a0926b0ab56c070e",
+          "Name": "image",
+          "Description": "Image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Loads the file as a bitmap.\n\nImage.ReadFromFile (file: var): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\HO VAN CHUONG\\Downloads\\image\\QImage.About.Information.Author.Large.png",
+      "InputValue": "..\\image\\QImage.About.Information.Author.Large.png",
+      "NodeType": "ExtensionNode",
+      "Id": "d26ed0d4fe494d4d925e6a6a6ba71577",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f3c1593beec244ec8bfc26449538e0eb",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "95d161d74a85427b88dc4c75d7c4928c",
+      "Inputs": [
+        {
+          "Id": "86e91715b1f34e3ebdc6a3a7cde348ba",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ae196e114be4a92bd4d71e7c779e2cf",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from a path."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.Dimensions@var",
+      "Id": "596e956bd98e4a16a9085559fb5387b6",
+      "Inputs": [
+        {
+          "Id": "98fb1dbc668d43ffa8f5262c9eb845d8",
+          "Name": "image",
+          "Description": "Image to get dimensions of.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03523874045c4832aba5ec96fa1dbbf6",
+          "Name": "width",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a350d15ea0c4b60962e5a587372999f",
+          "Name": "height",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the width and height of an image.\n\nImage.Dimensions (image: var): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "H:\\revit\\Dynamo\\API\\ZeroTouchNodeTemplate\\bin\\Debug\\QImage.dll",
+      "InputValue": "H:\\revit\\Dynamo\\API\\ZeroTouchNodeTemplate\\bin\\Debug\\QImage.dll",
+      "NodeType": "ExtensionNode",
+      "Id": "eb37a414b35d4579b6ff17b495454776",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "312837443f7a458e9261978466b28eb5",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\".png\";",
+      "Id": "05c29ffe77824ae6bbc13b44b03a3068",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0dd05f668ca54b1cb3a12122ac374765",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "C:\\Users\\HO VAN CHUONG\\Downloads\\image\\",
+      "Id": "f452b148e19c46508b37a9caaef7fc5f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b74c2d7f3d464e01a23bd2663136ead3",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a+b+c+d;",
+      "Id": "a0f05d328a7442898c5112750d1bd6fa",
+      "Inputs": [
+        {
+          "Id": "f938114648274399a6b8c3c81ef95197",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "08ab6423ca2f4eec98d1fcff33be83ec",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e5a1479f276488e8239d8f541b4ce59",
+          "Name": "c",
+          "Description": "c",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dce49cba570e433d9b6c9f3063b3ccba",
+          "Name": "d",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "43d74dc10d74424b97b93fc6d218d371",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\".Large\";",
+      "Id": "5317bb0417324328b37283975cdf220e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1ff7eb10edd04612a6e1fd11f3feac0d",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "",
+      "InputValue": "C:\\Users\\Public\\OneDrive - IZI Cloud\\Ảnh\\PythonAPI",
+      "NodeType": "ExtensionNode",
+      "Id": "86401c104b0b454fb059c2f973e858ee",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3c753aa4033441099c3fcb4230d1703d",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"zip\";",
+      "Id": "09c39d5a89f04e82914052c43473df5b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c90d12406fce49be873db1fddbbc40b3",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "7be5ac89e07241ff85b37e31ac6a91a2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d144e2ebf7924796a43a6107af978f76",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "80c9bb30f2ed42dc96b2a742880e58f1",
+      "Inputs": [
+        {
+          "Id": "a315fce5659b4d2a89aaab9e3cbc13c9",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3c404c89d6c547c6b0c27d7b4d563eec",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "d1105f47114040f9a2dde5c2d1ee0e2c",
+      "Inputs": [
+        {
+          "Id": "1171e9aefc754070a2a68738582f4b41",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e3a9f8cb03e4efa9498be0fdc302207",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.GetImagesPath@string",
+      "Id": "08b8cb9fdb7b4698860c4ce86fb2f56b",
+      "Inputs": [
+        {
+          "Id": "df994cf017de4e90a1742fb8616bab58",
+          "Name": "folderName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1f9fd8fb19824d25833ad2f367f4c5a5",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Return all Image format \"jpg\", \"jpeg\", \"png\", \"gif\", \"tiff\", \"bmp\", \"svg\" in folder\n\nImage.GetImagesPath (folderName: string): string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.GetFileFolder@string",
+      "Id": "e5c70f8a3d9848e0a1e48de6f1376e58",
+      "Inputs": [
+        {
+          "Id": "7a261552a84e4cfbb9ebe862d937ed2e",
+          "Name": "folderName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b4e077c8d77745e5b89e86aa5c28b1d2",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get All File Have In Folder\n\nImage.GetFileFolder (folderName: string): string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.GetFilesFrom@string,string[],bool",
+      "Id": "0c41588422794f359e15c7127fdd04a4",
+      "Inputs": [
+        {
+          "Id": "54a3407a02014cab9051ca71e64f8695",
+          "Name": "searchFolder",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eeb62d78b3ca4764bb4556dd6ccec6be",
+          "Name": "filters",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f03eb903d7bf48a88e2f209b73ae7b4f",
+          "Name": "isRecursive",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0a64dd763299486788fd034abae9e296",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get File From folder with filter\n\nImage.GetFilesFrom (searchFolder: string, filters: string[], isRecursive: bool): string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.Exportmethod@string",
+      "Id": "14298421ccf14b83bfe660326f3bb571",
+      "Inputs": [
+        {
+          "Id": "dda93aaae8934dfabae385c4eb9b8718",
+          "Name": "dll",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2437afcae610440d9940bd3d63c3b398",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Input File Dll To Read All Path Method\n\nImage.Exportmethod (dll: string): string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.SaveAsImage@string,var",
+      "Id": "6d130742209e4776afe1be1865b27cdb",
+      "Inputs": [
+        {
+          "Id": "3c8596194abe4943b7a7bcdbbc1e46c8",
+          "Name": "path",
+          "Description": "Path have Character (\\) Finnish\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "101734f2ea534ad08fdec011e741b73b",
+          "Name": "image",
+          "Description": "Image Resized Size\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "310fd641115e495ca549add4ad5ff8bf",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Save Image as New Name\n\nImage.SaveAsImage (path: string, image: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Image.Image.ResizeImage@var,int,int",
+      "Id": "23fa623c48ba46d89f566fb93818b5f1",
+      "Inputs": [
+        {
+          "Id": "c8ead95f4fe645c4a767cc173a1d218a",
+          "Name": "image",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "203ecb33ce894716b102892c8acc5e82",
+          "Name": "width",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7c443cdbff44957afd2aefe8f781234",
+          "Name": "height",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "10ef0a16f82a4a6c95bbaa9b9154e7bf",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Resize Image Width and Heigh\n\nImage.ResizeImage (image: var, width: int, height: int): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.QrCode.QrCode.CreateQRCodeColor@string,int,var,var",
+      "Id": "9fbfe80d77ba41638a6c3559f7a3f5ec",
+      "Inputs": [
+        {
+          "Id": "88edd2d5031049adb5cd5960f55144cd",
+          "Name": "str",
+          "Description": "String Gen QR\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bf6e50f8c2624b59bc9ae92bb1d37b66",
+          "Name": "Pixel",
+          "Description": "Pixel input a Int\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cef0fbec33464d76ab8f3764200d4f00",
+          "Name": "ColorQR",
+          "Description": "Color in QR\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d0e21a18ce14ec99042c7630cb6fea8",
+          "Name": "ColorBG",
+          "Description": "Color BackGround\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0655aa3d3ec64a16beb6ba522ed1b219",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create QRCode Color Option Extend\n\nQrCode.CreateQRCodeColor (str: string, Pixel: int, ColorQR: var, ColorBG: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.QrCode.QrCode.CreateQRCodeString@string,int",
+      "Id": "e674c79f11504b3487f1ba21fbd87ebb",
+      "Inputs": [
+        {
+          "Id": "3240e01e08624365816ff3226400bbff",
+          "Name": "str",
+          "Description": "string\nDefault value : \"Qrcode\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fe4411b4c68f4d5188843d4ec5cb47a8",
+          "Name": "Pixel",
+          "Description": "int\nDefault value : 20",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "50c820cb0fe54585b96aadd4d33ce8ef",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create QRCode String Sample\n\nQrCode.CreateQRCodeString (str: string = \"Qrcode\", Pixel: int = 20): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Color.Colors.SelectColorByName@string",
+      "Id": "ffa83877bf9842ad96a20f35d7e2aa88",
+      "Inputs": [
+        {
+          "Id": "2f0859b705e441faba3d18a0b2b8e191",
+          "Name": "NameColor",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f63cbda823e14e3ca18e7178ac7a15ca",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Select Color ByName Input String Color\n\nColors.SelectColorByName (NameColor: string): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"XX\";",
+      "Id": "d8cac77728644807ac28e9fcd26d9f37",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3de2297b36b24373a74d3183310d68c1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "20;",
+      "Id": "86ddfe2474994d7ab81a0360cad7a25e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "84221cc55aef4471a3a5e5eb20d6f0c2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Blue\";\n\"White\";",
+      "Id": "9e4bc37d1a6847de8d2ea2db1c46f1dc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1025b9ad0ea441a0b98fc928dbc65629",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c4c1568d8413492096c61328eeb83c89",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "QRImage.Color.Colors.SelectColorByName@string",
+      "Id": "df6c94f37b514c0ebf617af76c9347ac",
+      "Inputs": [
+        {
+          "Id": "36167fdcd50448f19198158ebea39496",
+          "Name": "NameColor",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8b9a320743294296b95adc7e7175dd62",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Select Color ByName Input String Color\n\nColors.SelectColorByName (NameColor: string): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b42af81fe53346d59891baacfa48a7d5",
+      "Inputs": [
+        {
+          "Id": "e99bdec2786d49789a220d0a5be215f4",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb7ea39851704425b7d9b0ed22fe0636",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "97a2411a6ff4488e8587d1c02eabc3e3",
+      "Inputs": [
+        {
+          "Id": "52e6b2634e50467eb1a6fc6700bcbd3d",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27ff4acbb2aa46fe948d55b3b2487ced",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "cfbba0cf70a44f3dbeb1c307c5ac4fc9",
+      "End": "203ecb33ce894716b102892c8acc5e82",
+      "Id": "e4df07454e2e4f91b0b6222b5b023a59"
+    },
+    {
+      "Start": "cfbba0cf70a44f3dbeb1c307c5ac4fc9",
+      "End": "a7c443cdbff44957afd2aefe8f781234",
+      "Id": "0a386a34b62940d4b25d2f2fbd276ab8"
+    },
+    {
+      "Start": "eea0685a653e4000a0926b0ab56c070e",
+      "End": "a315fce5659b4d2a89aaab9e3cbc13c9",
+      "Id": "1ffc19394cb144eb94f2c5f4c5f2680c"
+    },
+    {
+      "Start": "f3c1593beec244ec8bfc26449538e0eb",
+      "End": "86e91715b1f34e3ebdc6a3a7cde348ba",
+      "Id": "472d63ed77494682a6fb9190a7f64303"
+    },
+    {
+      "Start": "2ae196e114be4a92bd4d71e7c779e2cf",
+      "End": "ba5cdc01e535478eaa211c3b70e411b9",
+      "Id": "0d27cbd39c5544f29fb4d9c01404e561"
+    },
+    {
+      "Start": "312837443f7a458e9261978466b28eb5",
+      "End": "dda93aaae8934dfabae385c4eb9b8718",
+      "Id": "57c1f84c3f4f4a98a9359dfd17df168f"
+    },
+    {
+      "Start": "0dd05f668ca54b1cb3a12122ac374765",
+      "End": "dce49cba570e433d9b6c9f3063b3ccba",
+      "Id": "8944bc6d17544861bdd9c7d85f3948d8"
+    },
+    {
+      "Start": "b74c2d7f3d464e01a23bd2663136ead3",
+      "End": "f938114648274399a6b8c3c81ef95197",
+      "Id": "28ffbe4f775f4290b6eafb7914b26fdf"
+    },
+    {
+      "Start": "43d74dc10d74424b97b93fc6d218d371",
+      "End": "3c8596194abe4943b7a7bcdbbc1e46c8",
+      "Id": "e441202e70814a7db1a3a79e4ae8c6f2"
+    },
+    {
+      "Start": "1ff7eb10edd04612a6e1fd11f3feac0d",
+      "End": "8e5a1479f276488e8239d8f541b4ce59",
+      "Id": "40e9f0c8e16f432d8e231567fe041736"
+    },
+    {
+      "Start": "3c753aa4033441099c3fcb4230d1703d",
+      "End": "df994cf017de4e90a1742fb8616bab58",
+      "Id": "9f2f726852304835bcff8ae0af9e1f2f"
+    },
+    {
+      "Start": "3c753aa4033441099c3fcb4230d1703d",
+      "End": "7a261552a84e4cfbb9ebe862d937ed2e",
+      "Id": "848ba0a562d1494d9cd3a2a900db97b0"
+    },
+    {
+      "Start": "c90d12406fce49be873db1fddbbc40b3",
+      "End": "eeb62d78b3ca4764bb4556dd6ccec6be",
+      "Id": "a4911d39bcad4e048562bc444851c382"
+    },
+    {
+      "Start": "d144e2ebf7924796a43a6107af978f76",
+      "End": "f03eb903d7bf48a88e2f209b73ae7b4f",
+      "Id": "794a504d095240f395076833a754a1f1"
+    },
+    {
+      "Start": "3c404c89d6c547c6b0c27d7b4d563eec",
+      "End": "c8ead95f4fe645c4a767cc173a1d218a",
+      "Id": "3ce7f79a85ff405bb14577bb5fd8a9ef"
+    },
+    {
+      "Start": "2437afcae610440d9940bd3d63c3b398",
+      "End": "08ab6423ca2f4eec98d1fcff33be83ec",
+      "Id": "4769b0ef63dc4ffd8838d9025ae96079"
+    },
+    {
+      "Start": "10ef0a16f82a4a6c95bbaa9b9154e7bf",
+      "End": "98fb1dbc668d43ffa8f5262c9eb845d8",
+      "Id": "b85d468e29ea4e3fbf6db87fcf445231"
+    },
+    {
+      "Start": "10ef0a16f82a4a6c95bbaa9b9154e7bf",
+      "End": "1171e9aefc754070a2a68738582f4b41",
+      "Id": "72b39afbd43847cc8e41ac80d7aab71b"
+    },
+    {
+      "Start": "10ef0a16f82a4a6c95bbaa9b9154e7bf",
+      "End": "101734f2ea534ad08fdec011e741b73b",
+      "Id": "53026044ba8141b1959101ab43bc439b"
+    },
+    {
+      "Start": "0655aa3d3ec64a16beb6ba522ed1b219",
+      "End": "52e6b2634e50467eb1a6fc6700bcbd3d",
+      "Id": "d8f070587a0147729c0f36196a19284b"
+    },
+    {
+      "Start": "50c820cb0fe54585b96aadd4d33ce8ef",
+      "End": "e99bdec2786d49789a220d0a5be215f4",
+      "Id": "605f8325b55b44b39ab26504f971a5f0"
+    },
+    {
+      "Start": "f63cbda823e14e3ca18e7178ac7a15ca",
+      "End": "cef0fbec33464d76ab8f3764200d4f00",
+      "Id": "045f756446b14ed7b6f3af9475edbc84"
+    },
+    {
+      "Start": "3de2297b36b24373a74d3183310d68c1",
+      "End": "3240e01e08624365816ff3226400bbff",
+      "Id": "59cf7234c12e414fa60347deaaa20233"
+    },
+    {
+      "Start": "3de2297b36b24373a74d3183310d68c1",
+      "End": "88edd2d5031049adb5cd5960f55144cd",
+      "Id": "75a6ffa8b30f4ae5ae8bc7b96f02dd76"
+    },
+    {
+      "Start": "84221cc55aef4471a3a5e5eb20d6f0c2",
+      "End": "fe4411b4c68f4d5188843d4ec5cb47a8",
+      "Id": "683a2df5a0f54ab7a7f2c7166ccd72b1"
+    },
+    {
+      "Start": "84221cc55aef4471a3a5e5eb20d6f0c2",
+      "End": "bf6e50f8c2624b59bc9ae92bb1d37b66",
+      "Id": "8b23f39d29cb4f42b93a6f666fb22618"
+    },
+    {
+      "Start": "1025b9ad0ea441a0b98fc928dbc65629",
+      "End": "2f0859b705e441faba3d18a0b2b8e191",
+      "Id": "0f47fd4e2ad44f729693be644cc9b93a"
+    },
+    {
+      "Start": "c4c1568d8413492096c61328eeb83c89",
+      "End": "36167fdcd50448f19198158ebea39496",
+      "Id": "4feeb34cc0d648f280a3a42328893cfc"
+    },
+    {
+      "Start": "8b9a320743294296b95adc7e7175dd62",
+      "End": "0d0e21a18ce14ec99042c7630cb6fea8",
+      "Id": "349f9b9d43404ebb9770480fcda7ca3e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.7500",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ee1b6bee2b2c4278857d6dcb2c704e5d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 38.78684367557139,
+        "Y": 427.43896508867306
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.ReadFromFile",
+        "Id": "1960bacbe7bf4568a988ece890927e13",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -138.99594849364996,
+        "Y": 248.329824943458
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "d26ed0d4fe494d4d925e6a6a6ba71577",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -686.07951318860364,
+        "Y": 206.49919217577542
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File.FromPath",
+        "Id": "95d161d74a85427b88dc4c75d7c4928c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -298.243266480461,
+        "Y": 233.16152565132597
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.Dimensions",
+        "Id": "596e956bd98e4a16a9085559fb5387b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 548.087139263292,
+        "Y": 355.975264677799
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "eb37a414b35d4579b6ff17b495454776",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -668.553884855535,
+        "Y": 865.710259829575
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "05c29ffe77824ae6bbc13b44b03a3068",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -124.46301371045399,
+        "Y": 897.558348524773
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "f452b148e19c46508b37a9caaef7fc5f",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -245.868096945051,
+        "Y": 667.694141399958
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a0f05d328a7442898c5112750d1bd6fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 11.0,
+        "Y": 712.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5317bb0417324328b37283975cdf220e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -130.23646364102103,
+        "Y": 814.014699239146
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "86401c104b0b454fb059c2f973e858ee",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": -1374.4872092407443,
+        "Y": 509.92591928067657
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "09c39d5a89f04e82914052c43473df5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1207.890537732954,
+        "Y": 676.20945559806364
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "7be5ac89e07241ff85b37e31ac6a91a2",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1314.6120689282941,
+        "Y": 769.39963261242258
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "80c9bb30f2ed42dc96b2a742880e58f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 90.18309398904978,
+        "Y": -84.9527316783196
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "d1105f47114040f9a2dde5c2d1ee0e2c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 779.41360235332513,
+        "Y": 507.492215936929
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.GetImagesPath",
+        "Id": "08b8cb9fdb7b4698860c4ce86fb2f56b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1074.3494952678427,
+        "Y": 577.57891905255065
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.GetFileFolder",
+        "Id": "e5c70f8a3d9848e0a1e48de6f1376e58",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1088.5613882531184,
+        "Y": 440.92610188643727
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.GetFilesFrom",
+        "Id": "0c41588422794f359e15c7127fdd04a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1008.7561430281083,
+        "Y": 673.78250233749463
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.Exportmethod",
+        "Id": "14298421ccf14b83bfe660326f3bb571",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -393.89209496838828,
+        "Y": 863.657649112999
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.SaveAsImage",
+        "Id": "6d130742209e4776afe1be1865b27cdb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 468.63777427557682,
+        "Y": 711.32670955638969
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.ResizeImage",
+        "Id": "23fa623c48ba46d89f566fb93818b5f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 255.25166060739298,
+        "Y": 353.07513516727226
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "QrCode.CreateQRCodeColor",
+        "Id": "9fbfe80d77ba41638a6c3559f7a3f5ec",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1174.3681731834658,
+        "Y": 88.1026237805865
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "QrCode.CreateQRCodeString",
+        "Id": "e674c79f11504b3487f1ba21fbd87ebb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1150.2541055402389,
+        "Y": -75.883744225925625
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Colors.SelectColorByName",
+        "Id": "ffa83877bf9842ad96a20f35d7e2aa88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1435.8075393112749,
+        "Y": 94.269052949076354
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d8cac77728644807ac28e9fcd26d9f37",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1422.2805581701843,
+        "Y": -87.741556210659837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "86ddfe2474994d7ab81a0360cad7a25e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1328.2805581701843,
+        "Y": -26.741556210659837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9e4bc37d1a6847de8d2ea2db1c46f1dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1574.63432756468,
+        "Y": 139.44224844447638
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Colors.SelectColorByName",
+        "Id": "df6c94f37b514c0ebf617af76c9347ac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1443.0504291115838,
+        "Y": 179.20839697087985
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "b42af81fe53346d59891baacfa48a7d5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -879.4613984076716,
+        "Y": 20.324264180524096
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "97a2411a6ff4488e8587d1c02eabc3e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -919.71241111931954,
+        "Y": 144.97256161014388
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "7b0a4a14a5964e5eb27159edd8a89878",
+        "Title": "GetFile",
+        "Nodes": [
+          "86401c104b0b454fb059c2f973e858ee",
+          "09c39d5a89f04e82914052c43473df5b",
+          "7be5ac89e07241ff85b37e31ac6a91a2",
+          "08b8cb9fdb7b4698860c4ce86fb2f56b",
+          "e5c70f8a3d9848e0a1e48de6f1376e58",
+          "0c41588422794f359e15c7127fdd04a4"
+        ],
+        "Left": -1384.4872092407443,
+        "Top": 387.92610188643727,
+        "Width": 626.73106621263594,
+        "Height": 449.47353072598531,
+        "FontSize": 36.0,
+        "InitialTop": 440.92610188643727,
+        "InitialHeight": 426.47353072598531,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9cf40f636efd42d5a0850b239c281dd6",
+        "Title": "Zero Touch Gen Image",
+        "Nodes": [
+          "ee1b6bee2b2c4278857d6dcb2c704e5d",
+          "1960bacbe7bf4568a988ece890927e13",
+          "d26ed0d4fe494d4d925e6a6a6ba71577",
+          "95d161d74a85427b88dc4c75d7c4928c",
+          "596e956bd98e4a16a9085559fb5387b6",
+          "eb37a414b35d4579b6ff17b495454776",
+          "05c29ffe77824ae6bbc13b44b03a3068",
+          "f452b148e19c46508b37a9caaef7fc5f",
+          "a0f05d328a7442898c5112750d1bd6fa",
+          "5317bb0417324328b37283975cdf220e",
+          "80c9bb30f2ed42dc96b2a742880e58f1",
+          "d1105f47114040f9a2dde5c2d1ee0e2c",
+          "14298421ccf14b83bfe660326f3bb571",
+          "6d130742209e4776afe1be1865b27cdb",
+          "23fa623c48ba46d89f566fb93818b5f1"
+        ],
+        "Left": -696.07951318860364,
+        "Top": -137.95273167831959,
+        "Width": 1623.4931155419288,
+        "Height": 1128.5110802030927,
+        "FontSize": 36.0,
+        "InitialTop": -84.9527316783196,
+        "InitialHeight": 1105.5110802030927,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "13e5468176d84340a340963ecdc2d7ed",
+        "Title": "Create QRCode",
+        "Nodes": [
+          "9fbfe80d77ba41638a6c3559f7a3f5ec",
+          "e674c79f11504b3487f1ba21fbd87ebb",
+          "ffa83877bf9842ad96a20f35d7e2aa88",
+          "d8cac77728644807ac28e9fcd26d9f37",
+          "86ddfe2474994d7ab81a0360cad7a25e",
+          "9e4bc37d1a6847de8d2ea2db1c46f1dc",
+          "df6c94f37b514c0ebf617af76c9347ac",
+          "b42af81fe53346d59891baacfa48a7d5",
+          "97a2411a6ff4488e8587d1c02eabc3e3"
+        ],
+        "Left": -1584.63432756468,
+        "Top": -140.74155621065984,
+        "Width": 853.17292915700841,
+        "Height": 412.94995318153968,
+        "FontSize": 36.0,
+        "InitialTop": -87.741556210659837,
+        "InitialHeight": 389.94995318153968,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 850.29900571538235,
+    "Y": 364.31412086390424,
+    "Zoom": 0.38718180270952124
+  }
+}

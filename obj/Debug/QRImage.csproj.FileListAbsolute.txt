@@ -24,3 +24,15 @@ H:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.csproj.CoreCompileInputs.cache
 H:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.csproj.CopyComplete
 H:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.dll
 H:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.pdb
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.Resources.QRImageIcon.resources
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.csproj.GenerateResource.cache
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.csproj.CoreCompileInputs.cache
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRImage.dll.config
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRImage.xml
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRImage.dll
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRImage.pdb
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRCoder.dll
+F:\revit\Dynamo\API\QRImage\bin\Debug\QRCoder.pdb
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.csproj.CopyComplete
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.dll
+F:\revit\Dynamo\API\QRImage\obj\Debug\QRImage.pdb

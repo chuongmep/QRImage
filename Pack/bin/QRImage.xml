@@ -4,60 +4,41 @@
         <name>QRImage</name>
     </assembly>
     <members>
-        <member name="T:Me.Information">
+        <member name="T:Data.Information">
             <summary>
                 Information All Package
             </summary>
         </member>
-        <member name="M:Me.Information.Author">
+        <member name="M:Data.Information.Author">
             <summary>
                 Contact with Author
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Colors">
+        <member name="T:Data.Colors">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Colors.SelectColorByName(System.String)">
+        <member name="M:Data.Colors.SelectColorByName(System.String)">
             <summary>
             Select Color ByName Input String Color
             </summary>
             <param name="NameColor"></param>
             <returns></returns>
         </member>
-        <member name="M:Colors.GetAllColors">
+        <member name="M:Data.Colors.GetAllColors">
             <summary>
             Return All Color
             </summary>
             <returns name = "ListColor"></returns>
         </member>
-        <member name="T:Assemblys">
-            <summary>
-            Class Export Dll
-            </summary>
-        </member>
-        <member name="M:Assemblys.Exportmethod(System.String)">
-            <summary>
-            Input File Dll To Read All Path Method
-            </summary>
-            <param name="dll"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Assemblys.NameSpace(System.String)">
-            <summary>
-            Return NameSpace In 
-            </summary>
-            <param name="dll"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Image">
+        <member name="T:Data.Image">
             <summary>
             Image
             </summary>
         </member>
-        <member name="M:Image.ResizeImage(System.Drawing.Bitmap,System.Int32,System.Int32)">
+        <member name="M:Data.Image.ResizeImage(System.Drawing.Bitmap,System.Int32,System.Int32)">
             <summary>
             Resize Image Width and Heigh
             </summary>
@@ -66,7 +47,7 @@
             <param name="height"></param>
             <returns name = "BitMapImage"></returns>
         </member>
-        <member name="M:Image.SaveAsImage(System.String,System.Drawing.Bitmap)">
+        <member name="M:Data.Image.SaveAsImage(System.String,System.Drawing.Bitmap)">
             <summary>
             Save Image as New Name
             </summary>
@@ -75,21 +56,28 @@
             <returns></returns>
             <exception cref="T:System.Exception"></exception>
         </member>
-        <member name="M:Image.GetFileFolder(System.String)">
+        <member name="M:Data.Image.Exportmethod(System.String)">
+            <summary>
+            Input File Dll To Read All Path Method
+            </summary>
+            <param name="dll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Data.Image.GetFileFolder(System.String)">
             <summary>
             Get All File Have In Folder
             </summary>
             <param name="folderName"></param>
             <returns name= "ImageList"></returns>
         </member>
-        <member name="M:Image.GetImagesPath(System.String)">
+        <member name="M:Data.Image.GetImagesPath(System.String)">
             <summary>
             Return all Image format "jpg", "jpeg", "png", "gif", "tiff", "bmp", "svg" in folder
             </summary>
             <param name="folderName"></param>
             <returns name ="files"></returns>
         </member>
-        <member name="M:Image.GetFilesFrom(System.String,System.String[],System.Boolean)">
+        <member name="M:Data.Image.GetFilesFrom(System.String,System.String[],System.Boolean)">
             <summary>
             Get File From folder with filter
             </summary>
@@ -98,12 +86,12 @@
             <param name="isRecursive"></param>
             <returns></returns>
         </member>
-        <member name="T:QrCode">
+        <member name="T:Data.QrCode">
             <summary>
             QrCode
             </summary>
         </member>
-        <member name="M:QrCode.CreateQRCodeString(System.String,System.Int32)">
+        <member name="M:Data.QrCode.CreateQRCodeString(System.String,System.Int32)">
             <summary>
             Create QRCode String Sample
             </summary>
@@ -111,7 +99,7 @@
             <param name="Pixel"></param>
             <returns></returns>
         </member>
-        <member name="M:QrCode.CreateQRCodeColor(System.String,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+        <member name="M:Data.QrCode.CreateQRCodeColor(System.String,System.Int32,System.Drawing.Color,System.Drawing.Color)">
             <summary>
             Create QRCode Color Option Extend
             </summary>

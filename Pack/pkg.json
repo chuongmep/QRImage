@@ -1,0 +1,23 @@
+{
+  "license": "MIT",
+  "file_hash": null,
+  "name": "QRImage",
+  "version": "0.0.4",
+  "description":
+    "Create QRCode And Edit Image ZeroTouch\r\nUse for Dynamo Core And Dynamo Revit.\r\nSupport : Dynamo 2.0 Over \r\nFile Sample : Folder extra\r\nChuongmep.com",
+  "group": "ZeroTouch",
+  "keywords": ["qrcode", "zerotouch"],
+  "dependencies": [],
+  "contents": "",
+  "engine_version": "2.1.0.7733",
+  "engine": "dynamo",
+  "engine_metadata": "",
+  "site_url": "http://chuongmep.com/",
+  "repository_url": "http://chuongmep.com/",
+  "contains_binaries": true,
+  "node_libraries": [
+    "QRImage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "QRImage.customization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+
+  ]
+}

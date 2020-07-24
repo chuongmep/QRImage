@@ -4,12 +4,12 @@
         <name>QRImage</name>
     </assembly>
     <members>
-        <member name="T:Me.Information">
+        <member name="T:About">
             <summary>
                 Information All Package
             </summary>
         </member>
-        <member name="M:Me.Information.Author">
+        <member name="M:About.Author">
             <summary>
                 Contact with Author
             </summary>

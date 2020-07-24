@@ -1,11 +1,8 @@
-﻿namespace Me
-{
-
-
+﻿
     /// <summary>
     ///     Information All Package
     /// </summary>
-    public static class Information
+    public static class About
     {
 
         /// <summary>
@@ -18,4 +15,3 @@
             return "Chuongpqvn@gmail.com";
         }
     }
-}

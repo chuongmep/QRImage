@@ -80,11 +80,6 @@
     <Compile Include="Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QrCode.cs" />
-    <Compile Include="Resources\QRImageIcon.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QRImageIcon.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -116,14 +111,11 @@
     <Content Include="Pack\bin\QRImage.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\QRImageIcon.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>QRImageIcon.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\QRImageImages.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y  "$(TargetDir)QRImage.dll" "$(AppData)\Dynamo\Dynamo Core\2.6\packages\QRImage\bin\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y  "$(TargetDir)QRImage.dll" "$(AppData)\Dynamo\Dynamo Core\2.7\packages\QRImage\bin\"</PostBuildEvent>
   </PropertyGroup>
   <Target Name="BeforeBuild">
   </Target>
@@ -137,7 +129,7 @@
       <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
     </GetAssemblyIdentity>
     <!-- Generate customization dll -->
-    <GenerateResource SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" UseSourcePath="true" Sources="$(ProjectDir)\Resources\QRImageIcon.resx" OutputResources="$(ProjectDir)\Resources\QRImageIcon.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
-    <AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)\Resources\QRImageIcon.resources" OutputAssembly="$(OutDir)QRImage.customization.dll" Version="%(AssemblyInfo.Version)" />
+    <GenerateResource SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" UseSourcePath="true" Sources="$(ProjectDir)\Resources\QRImageImages.resx" OutputResources="$(ProjectDir)\Resources\QRImageImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
+    <AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)\Resources\QRImageImages.resources" OutputAssembly="$(OutDir)QRImage.customization.dll" Version="%(AssemblyInfo.Version)" />
   </Target>
 </Project>

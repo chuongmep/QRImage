@@ -78,9 +78,6 @@ public static class Image
     #endregion
 
 
-    
-
-
     #region GetFileFolder
 
     /// <summary>
